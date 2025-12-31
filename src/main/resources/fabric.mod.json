@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "hotbarinventorytransfer",
+  "version": "1.0.0",
+  "name": "Hotbar Inventory Transfer",
+  "description": "Instantly return items from your hotbar to your inventory with a single keypress",
+  "authors": [
+    "Armaninyow"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": "",
+    "issues": ""
+  },
+  "license": "MIT",
+  "icon": "assets/hotbarinventorytransfer/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.armaninyow.hotbarinventorytransfer.HotbarInventoryTransferMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.17.0",
+    "minecraft": "~1.21.10",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
