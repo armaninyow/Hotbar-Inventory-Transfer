@@ -8,9 +8,9 @@
     "Armaninyow"
   ],
   "contact": {
-    "homepage": "",
-    "sources": "",
-    "issues": ""
+    "homepage": "https://github.com/armaninyow/Hotbar-Inventory-Transfer",
+    "sources": "https://github.com/armaninyow/Hotbar-Inventory-Transfer/blob/main/src/main/java/com/armaninyow/hotbarinventorytransfer/HotbarInventoryTransferMod.java",
+    "issues": "https://github.com/armaninyow/Hotbar-Inventory-Transfer/issues"
   },
   "license": "MIT",
   "icon": "assets/hotbarinventorytransfer/icon.png",
