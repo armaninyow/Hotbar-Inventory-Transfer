@@ -26,7 +26,7 @@ A Fabric mod for Minecraft 1.21.10 that allows you to quickly transfer items fro
 
 1. Create the project structure:
 ```
-inventoryswap/
+hotbarinventorytransfer/
 ├── src/
 │   └── main/
 │       ├── java/
@@ -96,6 +96,7 @@ MIT License - Feel free to modify and redistribute
 - If your inventory is full, the swap won't happen
 - The mod only affects the client-side, so it works on any server
 - Compatible with most other inventory mods
+
 
 
 
