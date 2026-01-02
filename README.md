@@ -59,6 +59,7 @@ pluginManagement {
 ```
 
 3. Place all the provided files in their correct locations:
+
 &nbsp;  - `InventorySwapMod.java` → `src/main/java/com/example/inventoryswap/`
 &nbsp;  - `fabric.mod.json` → `src/main/resources/`
 &nbsp;  - `en_us.json` → `src/main/resources/assets/inventoryswap/lang/`
@@ -95,3 +96,4 @@ MIT License - Feel free to modify and redistribute
 - If your inventory is full, the swap won't happen
 - The mod only affects the client-side, so it works on any server
 - Compatible with most other inventory mods
+
