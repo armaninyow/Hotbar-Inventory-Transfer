@@ -48,13 +48,13 @@ inventoryswap/
 2. Create settings.gradle:
 ```groovy
 pluginManagement {
-&nbsp;   repositories {
-&nbsp;       maven {
-&nbsp;           name = 'Fabric'
-&nbsp;           url = 'https://maven.fabricmc.net/'
-&nbsp;       }
-&nbsp;       gradlePluginPortal()
-&nbsp;   }
+   repositories {
+       maven {
+           name = 'Fabric'
+           url = 'https://maven.fabricmc.net/'
+       }
+       gradlePluginPortal()
+   }
 }
 ```
 
@@ -96,5 +96,6 @@ MIT License - Feel free to modify and redistribute
 - If your inventory is full, the swap won't happen
 - The mod only affects the client-side, so it works on any server
 - Compatible with most other inventory mods
+
 
 
