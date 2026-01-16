@@ -1,3 +1,5 @@
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.youtube.com/watch?v=xvFZjo5PgG0)
+
 # Hotbar Inventory Transfer
 
 ![Mod Icon](src/main/resources/assets/hotbarinventorytransfer/icon.png)
@@ -28,8 +30,4 @@ If you encounter bugs or wish to contribute:
 * **Author**: Armaninyow
 * **License**: Released under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
 
-
-
-
-
-
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.youtube.com/watch?v=xvFZjo5PgG0)
