@@ -23,10 +23,10 @@
 ## 🆘 Support
 If you encounter bugs or have suggestions:
 * **Issue Tracker**: Report problems on our [GitHub Issues page](https://github.com/armaninyow/Hotbar-Inventory-Transfer/issues).
-* **Source Code**: View the project logic on [GitHub](https://github.com/armaninyow/Hotbar-Inventory-Transfer).
 
 ## 👥 Credits
-* **Maintainer**: Armaninyow
+* **Author**: Armaninyow
 * **License**: Released under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+
 
 
