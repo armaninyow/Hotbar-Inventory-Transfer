@@ -21,12 +21,14 @@
 4.  **Configure**: Go to **Options > Controls > Keybinds** to find the "Hotbar Inventory Transfer" category.
 
 ## 🆘 Support
-If you encounter bugs or have suggestions:
+If you encounter bugs or wish to contribute:
 * **Issue Tracker**: Report problems on our [GitHub Issues page](https://github.com/armaninyow/Hotbar-Inventory-Transfer/issues).
+* **Contributions**: Submit improvements via [Pull Requests](https://github.com/armaninyow/Hotbar-Inventory-Transfer/pulls).
 
 ## 👥 Credits
 * **Author**: Armaninyow
 * **License**: Released under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+
 
 
 
