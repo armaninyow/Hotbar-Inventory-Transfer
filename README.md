@@ -15,7 +15,7 @@
 
 ## 🚀 Installation
 1.  **Requirements**: Ensure you have Minecraft 1.21.10, Fabric Loader 0.18.4, and the Fabric API installed.
-2.  **Download**: Get the latest `.jar` from [Modrinth](https://modrinth.com/mod/hotbar-inventory-transfer) or [GitHub](https://github.com/armaninyow/Hotbar-Inventory-Transfer).
+2.  **Download**: Get the latest `.jar` from [Modrinth](https://modrinth.com/mod/hotbar-inventory-transfer) or [CurseForge](https://www.curseforge.com/minecraft/mc-mods/hotbar-inventory-transfer).
 3.  **Setup**: Drop the file into your `%appdata%/.minecraft/mods` folder.
 4.  **Configure**: Go to **Options > Controls > Keybinds** to find the "Hotbar Inventory Transfer" category.
 
@@ -27,6 +27,7 @@ If you encounter bugs or wish to contribute:
 ## 👥 Credits
 * **Author**: Armaninyow
 * **License**: Released under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+
 
 
 
