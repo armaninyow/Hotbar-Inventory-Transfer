@@ -12,7 +12,6 @@
 ## ✨ Benefits
 * **Speed**: Clear your hotbar for building or combat without breaking your flow.
 * **Organization**: Keep your active slots clean and ensure items are sent back to the 27-slot main inventory instantly.
-* **Clean Code**: Updated to follow official FabricMC formatting standards for better performance.
 
 ## 🚀 Installation
 1.  **Requirements**: Ensure you have Minecraft 1.21.10, Fabric Loader 0.18.4, and the Fabric API installed.
@@ -28,6 +27,7 @@ If you encounter bugs or wish to contribute:
 ## 👥 Credits
 * **Author**: Armaninyow
 * **License**: Released under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+
 
 
 
