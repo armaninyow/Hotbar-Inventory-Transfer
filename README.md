@@ -2,8 +2,6 @@
 
 ![Mod Icon](src/main/resources/assets/hotbarinventorytransfer/icon.png)
 
----
-
 ## 🛠️ Functionality
 **Hotbar Inventory Transfer** streamlines your inventory management. Instead of opening your inventory and manually dragging items, you can hover over a hotbar slot and press a hotkey to automatically move that item back into the main inventory area.
 
@@ -30,4 +28,5 @@ If you encounter bugs or have suggestions:
 ## 👥 Credits
 * **Maintainer**: Armaninyow
 * **License**: Released under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+
 
