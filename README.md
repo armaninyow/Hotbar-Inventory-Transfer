@@ -1,102 +1,29 @@
- Hotbar Inventory Transfer
+# Hotbar Inventory Transfer
 
-A Fabric mod for Minecraft 1.21.10 that allows you to quickly transfer items from your hotbar to your inventory using a customizable keybind.
+![Mod Icon](src/main/resources/assets/hotbarinventorytransfer/icon.png)
 
- Features
+## What the project does
+Hotbar Inventory Transfer is a lightweight Fabric mod for Minecraft 1.21.10 that allows players to instantly move items from their active hotbar slot back into their main inventory with a single keypress.
 
-- Press a key (default: R) while holding a hotbar item to instantly move it to your inventory
-- No need to open your inventory screen
-- Fully customizable keybind in Minecraft's Controls settings
-- Lightweight and client-side only
+## Why the project is useful
+Managing a cluttered hotbar during survival gameplay can be tedious. This mod streamlines inventory management by:
+* **Quick Clearing**: Instantly free up a hotbar slot for tools or blocks without opening the inventory GUI.
+* **Smart Stacking**: The mod automatically looks for existing stacks in your inventory to merge with before picking an empty slot.
+* **Efficient Workflow**: Ideal for builders and miners who need to swap between materials and tools rapidly.
 
- Installation
+## How users can get started with the project
+1.  **Requirements**: Ensure you have [Fabric Loader](https://fabricmc.net/) installed for Minecraft 1.21.10.
+2.  **Installation**: Drop the `.jar` file into your Minecraft `mods` folder.
+3.  **Controls**: 
+    * The default keybind is **`R`**. 
+    * You can change this in the game settings under the **"Hotbar Inventory Transfer"** category.
+4.  **Usage**: Hover over an item in your hotbar and press the assigned key to send it back to your inventory.
 
-1. Install [Fabric Loader](https://fabricmc.net/use/) for Minecraft 1.21.10
-2. Download and install [Fabric API](https://modrinth.com/mod/fabric-api) version 0.138.4+1.21.10 or later
-3. Place this mod's JAR file in your `.minecraft/mods` folder
-4. Launch Minecraft with the Fabric profile
+## Where users can get help
+If you encounter bugs or have suggestions, please use the following resources:
+* **Issue Tracker**: [GitHub Issues](https://github.com/armaninyow/Hotbar-Inventory-Transfer/issues)
+* **Documentation**: View the source code and implementation details on the [GitHub Repository](https://github.com/armaninyow/Hotbar-Inventory-Transfer).
 
- Building from Source
-
- Prerequisites
-- Java 21 or higher
-- Git (optional)
-
- Setup
-
-1. Create the project structure:
-```
-hotbarinventorytransfer/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com/
-│       │       └── example/
-│       │           └── inventoryswap/
-│       │               └── InventorySwapMod.java
-│       └── resources/
-│           ├── fabric.mod.json
-│           └── assets/
-│               └── inventoryswap/
-│                   └── lang/
-│                       └── en_us.json
-├── build.gradle
-├── gradle.properties
-└── settings.gradle
-```
-
-2. Create settings.gradle:
-```groovy
-pluginManagement {
-   repositories {
-       maven {
-           name = 'Fabric'
-           url = 'https://maven.fabricmc.net/'
-       }
-       gradlePluginPortal()
-   }
-}
-```
-
-3. Place all the provided files in their correct locations:
-
-- `InventorySwapMod.java` → `src/main/java/com/example/inventoryswap/`
-- `fabric.mod.json` → `src/main/resources/`
-- `en_us.json` → `src/main/resources/assets/inventoryswap/lang/`
-- `build.gradle` → root directory
-- `gradle.properties` → root directory
-
-4. Build the mod:
-```bash
-./gradlew build
-```
-
-The compiled JAR will be in `build/libs/inventoryswap-1.0.0.jar`
-
- 🎮 How to Use
-
-1. Hold any item in your hotbar
-2. Press R (or your configured key)
-3. The item instantly moves to your inventory - stacking with matching items first, then finding empty slots
-
- 🔧 Technical Details
-
-- Minecraft Version: 1.21.10
-- Mod Loader: Fabric
-- Fabric Loader: 0.17.3 or higher
-- Required: Fabric API 0.138.4+1.21.10 or later
-- Side: Client-side (can be installed on client only in multiplayer)
-
- License
-
-MIT License - Feel free to modify and redistribute
-
- Notes
-
-- If your inventory is full, the swap won't happen
-- The mod only affects the client-side, so it works on any server
-- Compatible with most other inventory mods
-
-
-
-
+## Who maintains and contributes to the project
+* **Lead Developer**: Armaninyow
+* **License**: This project is licensed under the [CC0-1.0 License](https://creativecommons.org/publicdomain/zero/1.0/), meaning it is dedicated to the public domain.
