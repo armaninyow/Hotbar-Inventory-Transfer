@@ -1,29 +1,29 @@
 {
-  "schemaVersion": 1,
-  "id": "hotbarinventorytransfer",
-  "version": "1.0.0",
-  "name": "Hotbar Inventory Transfer",
-  "description": "Instantly return items from your hotbar to your inventory with a single keypress",
-  "authors": [
-    "Armaninyow"
-  ],
-  "contact": {
-    "homepage": "https://github.com/armaninyow/Hotbar-Inventory-Transfer",
-    "sources": "https://github.com/armaninyow/Hotbar-Inventory-Transfer/blob/main/src/main/java/com/armaninyow/hotbarinventorytransfer/HotbarInventoryTransferMod.java",
-    "issues": "https://github.com/armaninyow/Hotbar-Inventory-Transfer/issues"
-  },
-  "license": "MIT",
-  "icon": "assets/hotbarinventorytransfer/icon.png",
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "com.armaninyow.hotbarinventorytransfer.HotbarInventoryTransferMod"
-    ]
-  },
-  "depends": {
-    "fabricloader": ">=0.17.0",
-    "minecraft": "~1.21.10",
-    "java": ">=21",
-    "fabric-api": "*"
-  }
+	"schemaVersion": 1,
+	"id": "hotbarinventorytransfer",
+	"version": "${version}",
+	"name": "Hotbar Inventory Transfer",
+	"description": "Instantly return items from your hotbar to your inventory with a single keypress",
+	"authors": [
+		"Armaninyow"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/hotbar-inventory-transfer",
+		"sources": "https://github.com/armaninyow/Hotbar-Inventory-Transfer",
+		"issues": "https://github.com/armaninyow/Hotbar-Inventory-Transfer/issues"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/hotbarinventorytransfer/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.armaninyow.hotbarinventorytransfer.HotbarInventoryTransfer"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
 }
