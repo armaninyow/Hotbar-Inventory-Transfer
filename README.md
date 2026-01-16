@@ -1,29 +1,32 @@
 # Hotbar Inventory Transfer
 
-![Mod Icon](src/main/resources/assets/hotbarinventorytransfer/icon.png)
+![Mod Icon](assets/hotbarinventorytransfer/icon.png)
 
-## What the project does
-Hotbar Inventory Transfer is a lightweight Fabric mod for Minecraft 1.21.10 that allows players to instantly move items from their active hotbar slot back into their main inventory with a single keypress.
+---
 
-## Why the project is useful
-Managing a cluttered hotbar during survival gameplay can be tedious. This mod streamlines inventory management by:
-* **Quick Clearing**: Instantly free up a hotbar slot for tools or blocks without opening the inventory GUI.
-* **Smart Stacking**: The mod automatically looks for existing stacks in your inventory to merge with before picking an empty slot.
-* **Efficient Workflow**: Ideal for builders and miners who need to swap between materials and tools rapidly.
+## 🛠️ Functionality
+**Hotbar Inventory Transfer** streamlines your inventory management. Instead of opening your inventory and manually dragging items, you can hover over a hotbar slot and press a hotkey to automatically move that item back into the main inventory area.
 
-## How users can get started with the project
-1.  **Requirements**: Ensure you have [Fabric Loader](https://fabricmc.net/) installed for Minecraft 1.21.10.
-2.  **Installation**: Drop the `.jar` file into your Minecraft `mods` folder.
-3.  **Controls**: 
-    * The default keybind is **`R`**. 
-    * You can change this in the game settings under the **"Hotbar Inventory Transfer"** category.
-4.  **Usage**: Hover over an item in your hotbar and press the assigned key to send it back to your inventory.
+* **Smart Transfer**: Prioritizes existing stacks of the same item before occupying new empty slots.
+* **Safety Return**: If the main inventory is full, items are safely returned to the hotbar.
+* **Configurable Hotkey**: Uses a default keybind of **R**, which can be remapped in the Minecraft settings.
 
-## Where users can get help
-If you encounter bugs or have suggestions, please use the following resources:
-* **Issue Tracker**: [GitHub Issues](https://github.com/armaninyow/Hotbar-Inventory-Transfer/issues)
-* **Documentation**: View the source code and implementation details on the [GitHub Repository](https://github.com/armaninyow/Hotbar-Inventory-Transfer).
+## ✨ Benefits
+* **Speed**: Clear your hotbar for building or combat without breaking your flow.
+* **Organization**: Keep your active slots clean and ensure items are sent back to the 27-slot main inventory instantly.
+* **Clean Code**: Updated to follow official FabricMC formatting standards for better performance.
 
-## Who maintains and contributes to the project
-* **Lead Developer**: Armaninyow
-* **License**: This project is licensed under the [CC0-1.0 License](https://creativecommons.org/publicdomain/zero/1.0/), meaning it is dedicated to the public domain.
+## 🚀 Installation
+1.  **Requirements**: Ensure you have Minecraft 1.21.10, Fabric Loader 0.18.4, and the Fabric API installed.
+2.  **Download**: Get the latest `.jar` from [Modrinth](https://modrinth.com/mod/hotbar-inventory-transfer) or [GitHub](https://github.com/armaninyow/Hotbar-Inventory-Transfer).
+3.  **Setup**: Drop the file into your `%appdata%/.minecraft/mods` folder.
+4.  **Configure**: Go to **Options > Controls > Keybinds** to find the "Hotbar Inventory Transfer" category.
+
+## 🆘 Support
+If you encounter bugs or have suggestions:
+* **Issue Tracker**: Report problems on our [GitHub Issues page](https://github.com/armaninyow/Hotbar-Inventory-Transfer/issues).
+* **Source Code**: View the project logic on [GitHub](https://github.com/armaninyow/Hotbar-Inventory-Transfer).
+
+## 👥 Credits
+* **Maintainer**: Armaninyow
+* **License**: Released under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
