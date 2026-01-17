@@ -23,14 +23,15 @@
 
 ## Support
 If you encounter bugs or wish to contribute:
-* **Issue Tracker**: Report problems on our [GitHub Issues page](https://github.com/armaninyow/Hotbar-Inventory-Transfer/issues).
-* **Contributions**: Submit improvements via [Pull Requests](https://github.com/armaninyow/Hotbar-Inventory-Transfer/pulls).
+* [Report any problems you find.](https://github.com/armaninyow/Hotbar-Inventory-Transfer/issues).
+* [Submit your improvements and code changes.](https://github.com/armaninyow/Hotbar-Inventory-Transfer/pulls).
 
 ## Credits
 * **Author**: Armaninyow
 * **License**: Released under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.youtube.com/watch?v=xvFZjo5PgG0)
+
 
 
 
