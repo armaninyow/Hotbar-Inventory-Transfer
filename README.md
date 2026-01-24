@@ -38,8 +38,8 @@
   <summary></summary>
   
 If you encounter bugs or wish to contribute:
-* [Report any problems you find.](https://github.com/armaninyow/Hotbar-Inventory-Transfer/issues)
-* [Submit your improvements and code changes.](https://github.com/armaninyow/Hotbar-Inventory-Transfer/pulls)
+* [Report any problems you find.](https://github.com/armaninyow/Hotbar-Inventory-Transfer/discussions/categories/issues)
+* [Share your ideas for new features.](https://github.com/armaninyow/Hotbar-Inventory-Transfer/discussions/categories/suggestions)
 </details>
 
 ## Credits
@@ -51,6 +51,7 @@ If you encounter bugs or wish to contribute:
 </details>
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.youtube.com/watch?v=xvFZjo5PgG0)
+
 
 
 
