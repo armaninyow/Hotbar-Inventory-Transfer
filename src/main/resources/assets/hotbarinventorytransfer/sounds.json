@@ -1,0 +1,26 @@
+{
+	"bundle_insert1": {
+		"sounds": [
+			{
+				"name": "hotbarinventorytransfer:bundle_insert1",
+				"stream": false
+			}
+		]
+	},
+	"bundle_insert2": {
+		"sounds": [
+			{
+				"name": "hotbarinventorytransfer:bundle_insert2",
+				"stream": false
+			}
+		]
+	},
+	"bundle_insert3": {
+		"sounds": [
+			{
+				"name": "hotbarinventorytransfer:bundle_insert3",
+				"stream": false
+			}
+		]
+	}
+}

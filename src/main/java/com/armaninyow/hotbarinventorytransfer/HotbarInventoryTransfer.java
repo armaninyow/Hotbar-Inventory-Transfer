@@ -11,6 +11,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.util.Identifier;
 import net.minecraft.screen.slot.SlotActionType;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,10 +23,27 @@ public class HotbarInventoryTransfer implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	private static KeyBinding swapKeyBinding;
+	
+	// Register sound events
+	private static final Identifier BUNDLE_INSERT_1_ID = Identifier.of(MOD_ID, "bundle_insert1");
+	private static final Identifier BUNDLE_INSERT_2_ID = Identifier.of(MOD_ID, "bundle_insert2");
+	private static final Identifier BUNDLE_INSERT_3_ID = Identifier.of(MOD_ID, "bundle_insert3");
+	
+	public static final SoundEvent BUNDLE_INSERT_1 = SoundEvent.of(BUNDLE_INSERT_1_ID);
+	public static final SoundEvent BUNDLE_INSERT_2 = SoundEvent.of(BUNDLE_INSERT_2_ID);
+	public static final SoundEvent BUNDLE_INSERT_3 = SoundEvent.of(BUNDLE_INSERT_3_ID);
 
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Initializing Hotbar Inventory Transfer Mod");
+
+		// Register sounds
+		Registry.register(Registries.SOUND_EVENT, BUNDLE_INSERT_1_ID, BUNDLE_INSERT_1);
+		Registry.register(Registries.SOUND_EVENT, BUNDLE_INSERT_2_ID, BUNDLE_INSERT_2);
+		Registry.register(Registries.SOUND_EVENT, BUNDLE_INSERT_3_ID, BUNDLE_INSERT_3);
+		
+		// Initialize overlay
+		InventoryFullOverlay.init();
 
 		// Create custom category with Identifier
 		Category customCategory = new Category(Identifier.of(MOD_ID, "hotbar_inventory_transfer"));
@@ -61,6 +81,8 @@ public class HotbarInventoryTransfer implements ModInitializer {
 		// Pick up the entire stack from hotbar
 		client.interactionManager.clickSlot(syncId, hotbarScreenSlot, 0, SlotActionType.PICKUP, client.player);
 
+		boolean transferSuccessful = false;
+
 		// Try to distribute items across inventory
 		// Repeat up to 10 times to handle overflow cases
 		for (int attempt = 0; attempt < 10; attempt++) {
@@ -74,6 +96,7 @@ public class HotbarInventoryTransfer implements ModInitializer {
 
 			ItemStack cursorStack = client.player.currentScreenHandler.getCursorStack();
 			if (cursorStack.isEmpty()) {
+				transferSuccessful = true;
 				break; // All items placed successfully
 			}
 
@@ -118,6 +141,32 @@ public class HotbarInventoryTransfer implements ModInitializer {
 			LOGGER.debug("Forced return of remaining items to hotbar");
 		}
 
-		LOGGER.debug("Completed item swap from hotbar slot {}", selectedSlot);
+		// Show feedback based on transfer result
+		if (transferSuccessful) {
+			// Play random sound
+			playRandomBundleInsertSound(client);
+			LOGGER.debug("Completed item swap from hotbar slot {}", selectedSlot);
+		} else {
+			// Show inventory full message
+			InventoryFullOverlay.showMessage();
+			LOGGER.debug("Transfer failed - inventory full");
+		}
+	}
+
+	private static void playRandomBundleInsertSound(MinecraftClient client) {
+		if (client.player == null || client.world == null) return;
+		
+		SoundEvent[] sounds = {BUNDLE_INSERT_1, BUNDLE_INSERT_2, BUNDLE_INSERT_3};
+		SoundEvent randomSound = sounds[client.player.getRandom().nextInt(sounds.length)];
+		
+		// Play sound at player's position with PLAYERS category
+		client.world.playSound(
+			client.player,
+			client.player.getBlockPos(),
+			randomSound,
+			net.minecraft.sound.SoundCategory.PLAYERS,
+			1.0f, // volume
+			1.0f  // pitch
+		);
 	}
 }
