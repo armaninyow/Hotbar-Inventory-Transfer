@@ -1,4 +1,9 @@
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.youtube.com/watch?v=xvFZjo5PgG0)
+<details>
+  <summary></summary>
+  
+A lightweight mod that allows you to instantly return items from your hotbar to your inventory with a single keypress.
+</details>
 
 # Hotbar Inventory Transfer
 
@@ -51,6 +56,7 @@ If you encounter bugs or wish to contribute:
 </details>
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.youtube.com/watch?v=xvFZjo5PgG0)
+
 
 
 
