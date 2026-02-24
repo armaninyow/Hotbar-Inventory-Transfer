@@ -22,5 +22,13 @@
 				"stream": false
 			}
 		]
+	},
+	"bundle_insert_fail": {
+		"sounds": [
+			{
+				"name": "hotbarinventorytransfer:bundle_insert_fail",
+				"stream": false
+			}
+		]
 	}
 }

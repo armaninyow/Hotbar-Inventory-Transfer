@@ -15,12 +15,9 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import org.lwjgl.glfw.GLFW;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class HotbarInventoryTransfer implements ModInitializer {
 	public static final String MOD_ID = "hotbarinventorytransfer";
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	private static KeyBinding swapKeyBinding;
 	
@@ -28,19 +25,20 @@ public class HotbarInventoryTransfer implements ModInitializer {
 	private static final Identifier BUNDLE_INSERT_1_ID = Identifier.of(MOD_ID, "bundle_insert1");
 	private static final Identifier BUNDLE_INSERT_2_ID = Identifier.of(MOD_ID, "bundle_insert2");
 	private static final Identifier BUNDLE_INSERT_3_ID = Identifier.of(MOD_ID, "bundle_insert3");
+	private static final Identifier BUNDLE_INSERT_FAIL_ID = Identifier.of(MOD_ID, "bundle_insert_fail");
 	
 	public static final SoundEvent BUNDLE_INSERT_1 = SoundEvent.of(BUNDLE_INSERT_1_ID);
 	public static final SoundEvent BUNDLE_INSERT_2 = SoundEvent.of(BUNDLE_INSERT_2_ID);
 	public static final SoundEvent BUNDLE_INSERT_3 = SoundEvent.of(BUNDLE_INSERT_3_ID);
+	public static final SoundEvent BUNDLE_INSERT_FAIL = SoundEvent.of(BUNDLE_INSERT_FAIL_ID);
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Initializing Hotbar Inventory Transfer Mod");
-
 		// Register sounds
 		Registry.register(Registries.SOUND_EVENT, BUNDLE_INSERT_1_ID, BUNDLE_INSERT_1);
 		Registry.register(Registries.SOUND_EVENT, BUNDLE_INSERT_2_ID, BUNDLE_INSERT_2);
 		Registry.register(Registries.SOUND_EVENT, BUNDLE_INSERT_3_ID, BUNDLE_INSERT_3);
+		Registry.register(Registries.SOUND_EVENT, BUNDLE_INSERT_FAIL_ID, BUNDLE_INSERT_FAIL);
 		
 		// Initialize overlay
 		InventoryFullOverlay.init();
@@ -126,7 +124,6 @@ public class HotbarInventoryTransfer implements ModInitializer {
 			// If no suitable slot found, return to hotbar
 			if (targetSlot == -1) {
 				client.interactionManager.clickSlot(syncId, hotbarScreenSlot, 0, SlotActionType.PICKUP, client.player);
-				LOGGER.debug("Inventory full, returned items to hotbar");
 				break;
 			}
 
@@ -138,18 +135,16 @@ public class HotbarInventoryTransfer implements ModInitializer {
 		ItemStack finalCursorStack = client.player.currentScreenHandler.getCursorStack();
 		if (!finalCursorStack.isEmpty()) {
 			client.interactionManager.clickSlot(syncId, hotbarScreenSlot, 0, SlotActionType.PICKUP, client.player);
-			LOGGER.debug("Forced return of remaining items to hotbar");
 		}
 
 		// Show feedback based on transfer result
 		if (transferSuccessful) {
-			// Play random sound
+			// Play random sound at 80% volume with random pitch between 75% and 150%
 			playRandomBundleInsertSound(client);
-			LOGGER.debug("Completed item swap from hotbar slot {}", selectedSlot);
 		} else {
-			// Show inventory full message
+			// Show inventory full message and play fail sound
 			InventoryFullOverlay.showMessage();
-			LOGGER.debug("Transfer failed - inventory full");
+			playBundleInsertFailSound(client);
 		}
 	}
 
@@ -159,14 +154,31 @@ public class HotbarInventoryTransfer implements ModInitializer {
 		SoundEvent[] sounds = {BUNDLE_INSERT_1, BUNDLE_INSERT_2, BUNDLE_INSERT_3};
 		SoundEvent randomSound = sounds[client.player.getRandom().nextInt(sounds.length)];
 		
-		// Play sound at player's position with PLAYERS category
+		// Random pitch between 0.75 (75%) and 1.5 (150%)
+		float randomPitch = 0.75f + client.player.getRandom().nextFloat() * 0.75f;
+
+		// Play sound at player's position with PLAYERS category, 80% volume, random pitch
 		client.world.playSound(
 			client.player,
 			client.player.getBlockPos(),
 			randomSound,
 			net.minecraft.sound.SoundCategory.PLAYERS,
-			1.0f, // volume
-			1.0f  // pitch
+			0.8f, // 80% volume
+			randomPitch
+		);
+	}
+
+	private static void playBundleInsertFailSound(MinecraftClient client) {
+		if (client.player == null || client.world == null) return;
+
+		// Play fail sound at 100% volume and 100% pitch
+		client.world.playSound(
+			client.player,
+			client.player.getBlockPos(),
+			BUNDLE_INSERT_FAIL,
+			net.minecraft.sound.SoundCategory.PLAYERS,
+			1.0f, // 100% volume
+			1.0f  // 100% pitch
 		);
 	}
 }

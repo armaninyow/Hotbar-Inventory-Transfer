@@ -10,7 +10,7 @@
 	"contact": {
 		"homepage": "https://modrinth.com/mod/hotbar-inventory-transfer",
 		"sources": "https://github.com/armaninyow/Hotbar-Inventory-Transfer",
-		"issues": "https://github.com/armaninyow/Hotbar-Inventory-Transfer/issues"
+		"issues": "https://github.com/armaninyow/Hotbar-Inventory-Transfer/discussions/categories/issues"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/hotbarinventorytransfer/icon.png",

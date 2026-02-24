@@ -37,11 +37,11 @@ public class InventoryFullOverlay {
 		Text message = Text.literal("Inventory full!");
 		int messageWidth = client.textRenderer.getWidth(message);
 		
-		// Position above hotbar (similar to held item tooltip)
+		// Position above hotbar, raised a few pixels to avoid overlapping the vanilla held item tooltip
 		int screenWidth = client.getWindow().getScaledWidth();
 		int screenHeight = client.getWindow().getScaledHeight();
 		int x = (screenWidth - messageWidth) / 2;
-		int y = screenHeight - 59; // Just above hotbar
+		int y = screenHeight - 68; // Raised 9px above previous position to clear the held item tooltip
 		
 		// Calculate alpha for fade out
 		int alpha = 255;
