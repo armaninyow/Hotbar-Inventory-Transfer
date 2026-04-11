@@ -2,7 +2,7 @@
 
 # Hotbar Inventory Transfer
 
-![Mod Icon](src/main/resources/assets/hotbarinventorytransfer/icon.png)
+![Mod Icon](common/src/main/resources/assets/hotbarinventorytransfer/icon.png)
 
 ## Installation
 
