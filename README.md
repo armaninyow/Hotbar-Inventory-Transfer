@@ -1,66 +1,48 @@
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.youtube.com/watch?v=xvFZjo5PgG0)
 
 # Hotbar Inventory Transfer
-<details>
-  <summary></summary>
-  
-A lightweight mod that allows you to instantly return items from your hotbar to your inventory with a single keypress.
-</details>
 
 ![Mod Icon](src/main/resources/assets/hotbarinventorytransfer/icon.png)
 
-## Functionality
-<details>
-  <summary></summary>
-  
-**Hotbar Inventory Transfer** streamlines your inventory management. Instead of opening your inventory and manually dragging items, you can hover over a hotbar slot and press a hotkey to automatically move that item back into the main inventory area.
-
-* **Smart Transfer**: Prioritizes existing stacks of the same item before occupying new empty slots.
-* **Safety Return**: If the main inventory is full, items are safely returned to the hotbar.
-* **Configurable Hotkey**: Uses a default keybind of **R**, which can be remapped in the Minecraft settings.
-</details>
-
-## Benefits
-<details>
-  <summary></summary>
-  
-* **Speed**: Clear your hotbar for building or combat without breaking your flow.
-* **Organization**: Keep your active slots clean and ensure items are sent back to the 27-slot main inventory instantly.
-</details>
-
 ## Installation
-<details>
-  <summary></summary>
-  
-1.  **Requirements**: Ensure you have Minecraft 1.21.10, Fabric Loader 0.18.4, and the Fabric API installed.
-2.  **Download**: Get the latest `.jar` from [Modrinth](https://modrinth.com/mod/hotbar-inventory-transfer) or [CurseForge](https://www.curseforge.com/minecraft/mc-mods/hotbar-inventory-transfer).
-3.  **Setup**: Drop the file into your `%appdata%/.minecraft/mods` folder.
-4.  **Configure**: Go to **Options > Controls > Keybinds** to find the "Hotbar Inventory Transfer" category.
-</details>
+
+* [Modrinth](https://modrinth.com/mod/hotbar-inventory-transfer)
+* [CurseForge](https://www.curseforge.com/minecraft/mc-mods/hotbar-inventory-transfer)
 
 ## Support
-<details>
-  <summary></summary>
   
 If you encounter bugs or wish to contribute:
 * [Report any problems you find.](https://github.com/armaninyow/Hotbar-Inventory-Transfer/discussions/categories/issues)
 * [Share your ideas for new features.](https://github.com/armaninyow/Hotbar-Inventory-Transfer/discussions/categories/suggestions)
-</details>
 
-## Credits
+## Changelog
 <details>
   <summary></summary>
   
-* **Author**: Armaninyow
-* **License**: Released under [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+### 3.0.0—1.21.x
+* Added multi-version support covering Minecraft 1.21 through 1.21.11
+* Switched from custom .ogg sound files to vanilla bundle sounds (item.bundle.insert and item.bundle.insert_fail), removing the need for bundled audio assets
+* Removed sound playback on 1.21 and 1.21.1 since bundle sounds do not exist in those versions
+* Moved "Inventory full!" overlay text up by 4 pixels to avoid overlapping the held item tooltip
+* Removed exclamation mark from "Inventory full" overlay message
+### 2.0.0—1.21.11
+* Updated to Minecraft 1.21.11
+### 1.3.0—1.21.10
+* Added sound that plays when the inventory is full
+* Moved the "Inventory full!" tooltip up to prevent it from overlapping the vanilla Held Item Tooltip
+* Added random pitch variation between 75% and 150% to the transfer sounds
+* Reduced volume of transfer sounds from 100% to 80%
+### 1.2.0—1.21.10
+* Added sound effects when you successfully transfer items from your hotbar to your inventory
+* Added a red "Inventory full!" message that appears above your hotbar when the transfer fails because your inventory is full
+### 1.1.0—1.21.10
+* Refreshed the mod's visual identity with a new icon
+* Updated development environment and dependencies to target Minecraft version 1.21.10
+* Updated yarn_mappings (1.21.10+build.3), loader_version (0.18.4), and loom_version (1.14-SNAPSHOT) to the latest standards
+* Refactored code across all files to follow official FabricMC formatting and naming conventions
+* Optimized keybinding registration and client-side tick events for better performance and readability
+### 1.0.0—1.21.10
+* Initial Release
 </details>
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.youtube.com/watch?v=xvFZjo5PgG0)
-
-
-
-
-
-
-
-
