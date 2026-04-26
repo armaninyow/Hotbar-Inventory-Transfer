@@ -15,10 +15,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.registry.Registries;
 import org.lwjgl.glfw.GLFW;
 
-// 1.21.2-1.21.11:
-// - KeyBinding.Category does not exist until 1.21.9; category is a plain String translation key
-// - inventory.selectedSlot is a public field, not a method
-// - Bundle sounds exist (added in 1.21.2) and are looked up via registry
+// 1.21.2_1.21.4:
 public class HotbarInventoryTransfer implements ModInitializer {
 	public static final String MOD_ID = "hotbarinventorytransfer";
 

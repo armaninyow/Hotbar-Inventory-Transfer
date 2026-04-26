@@ -8,10 +8,14 @@ import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.util.Identifier;
 import net.minecraft.screen.slot.SlotActionType;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.registry.Registries;
 import org.lwjgl.glfw.GLFW;
 
-// 1.21-1.21.1:
+// 1.21.5_1.21.8:
 public class HotbarInventoryTransfer implements ModInitializer {
 	public static final String MOD_ID = "hotbarinventorytransfer";
 
@@ -22,12 +26,11 @@ public class HotbarInventoryTransfer implements ModInitializer {
 		// Initialize overlay
 		InventoryFullOverlay.init();
 
-		// Register keybinding with a plain String category (pre-1.21.9 API)
 		swapKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-			"key.hotbarinventorytransfer.swap",
-			InputUtil.Type.KEYSYM,
-			GLFW.GLFW_KEY_R,
-			"key.category.hotbarinventorytransfer.hotbar_inventory_transfer"
+    		"key.hotbarinventorytransfer.swap",
+    		InputUtil.Type.KEYSYM,
+    		GLFW.GLFW_KEY_R,
+    		"key.category.hotbarinventorytransfer.hotbar_inventory_transfer"
 		));
 
 		// Register tick event to check for key presses
@@ -44,7 +47,7 @@ public class HotbarInventoryTransfer implements ModInitializer {
 		if (client.interactionManager == null || client.player == null) return;
 
 		PlayerInventory inventory = client.player.getInventory();
-		int selectedSlot = inventory.selectedSlot; // public field in 1.21-1.21.1
+		int selectedSlot = inventory.getSelectedSlot(); // method in 1.21.5+
 		ItemStack hotbarStack = inventory.getStack(selectedSlot);
 
 		if (hotbarStack.isEmpty()) return;
@@ -111,9 +114,50 @@ public class HotbarInventoryTransfer implements ModInitializer {
 			client.interactionManager.clickSlot(syncId, hotbarScreenSlot, 0, SlotActionType.PICKUP, client.player);
 		}
 
-		// Show overlay feedback (no sound in 1.21-1.21.1 — bundle sounds don't exist yet)
-		if (!transferSuccessful) {
+		// Show feedback based on transfer result
+		if (transferSuccessful) {
+			playRandomBundleInsertSound(client);
+		} else {
 			InventoryFullOverlay.showMessage();
+			playBundleInsertFailSound(client);
 		}
+	}
+
+	private static SoundEvent getVanillaSound(String id) {
+		return Registries.SOUND_EVENT.get(Identifier.of("minecraft", id));
+	}
+
+	private static void playRandomBundleInsertSound(MinecraftClient client) {
+		if (client.player == null || client.world == null) return;
+
+		SoundEvent sound = getVanillaSound("item.bundle.insert");
+		if (sound == null) return;
+
+		float randomPitch = 0.75f + client.player.getRandom().nextFloat() * 0.75f;
+
+		client.world.playSound(
+			client.player,
+			client.player.getBlockPos(),
+			sound,
+			SoundCategory.PLAYERS,
+			0.8f,
+			randomPitch
+		);
+	}
+
+	private static void playBundleInsertFailSound(MinecraftClient client) {
+		if (client.player == null || client.world == null) return;
+
+		SoundEvent sound = getVanillaSound("item.bundle.insert_fail");
+		if (sound == null) return;
+
+		client.world.playSound(
+			client.player,
+			client.player.getBlockPos(),
+			sound,
+			SoundCategory.PLAYERS,
+			1.0f,
+			1.0f
+		);
 	}
 }

@@ -9,14 +9,14 @@ sourceSets {
 	main {
 		java {
 			srcDirs = [
-				file('src/main/java'),                        // 1.21-1.21.1 specific (no sounds, String category, field access)
-				rootProject.file('common/src/main/java')      // shared (InventoryFullOverlay)
+				file('src/main/java'),
+				rootProject.file('common/src/main/java')
 			]
 		}
 		resources {
 			srcDirs = [
-				file('src/main/resources'),                   // 1.21-1.21.1 fabric.mod.json
-				rootProject.file('common/src/main/resources') // shared (lang, icon)
+				file('src/main/resources'),
+				rootProject.file('common/src/main/resources')
 			]
 		}
 	}
