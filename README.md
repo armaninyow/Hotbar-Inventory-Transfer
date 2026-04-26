@@ -19,6 +19,9 @@ If you encounter bugs or wish to contribute:
 <details>
   <summary></summary>
   
+### 3.1.0—1.21.x
+* Split 1.21.5–1.21.11 into two separate version ranges to account for API differences between versions
+* Fixed a crash on 1.21.5–1.21.8 caused by a keybinding API that was not available until 1.21.9
 ### 3.0.0—1.21.x
 * Added multi-version support covering Minecraft 1.21 through 1.21.11
 * Switched from custom .ogg sound files to vanilla bundle sounds (item.bundle.insert and item.bundle.insert_fail), removing the need for bundled audio assets
