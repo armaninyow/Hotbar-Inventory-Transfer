@@ -19,6 +19,8 @@ If you encounter bugs or wish to contribute:
 <details>
   <summary></summary>
   
+### 4.0.0—26.x
+* Added support for Minecraft 26.1, 26.1.1, and 26.1.2
 ### 3.1.0—1.21.x
 * Split 1.21.5–1.21.11 into two separate version ranges to account for API differences between versions
 * Fixed a crash on 1.21.5–1.21.8 caused by a keybinding API that was not available until 1.21.9
