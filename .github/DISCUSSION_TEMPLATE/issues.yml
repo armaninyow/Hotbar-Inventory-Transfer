@@ -12,3 +12,12 @@ body:
         - "Other (Specify in text)"
     validations:
       required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a detailed description of the issue you are experiencing.
+      placeholder: What happened? What were you doing when the bug occurred?
+    validations:
+      required: true
