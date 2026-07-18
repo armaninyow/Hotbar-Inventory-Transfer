@@ -19,6 +19,10 @@ If you encounter bugs or wish to contribute:
 <details>
   <summary></summary>
   
+### 4.1.0—26.x
+* Added support for Minecraft 26.2
+* Fixed the hand animation still playing when the inventory was full, even though the item transfer failed
+* Fixed the held item instantly vanishing before the hand's slide-down animation instead of sliding away smoothly
 ### 4.0.0—26.x
 * Added support for Minecraft 26.1, 26.1.1, and 26.1.2
 ### 3.1.0—1.21.x
