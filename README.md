@@ -19,6 +19,9 @@ If you encounter bugs or wish to contribute:
 <details>
   <summary></summary>
   
+### 4.2.0—26.x
+* Added support for Minecraft 26.3
+* Updated Fabric Loader to 0.19.5 (required for 26.3)
 ### 4.1.0—26.x
 * Added support for Minecraft 26.2
 * Fixed the hand animation still playing when the inventory was full, even though the item transfer failed
