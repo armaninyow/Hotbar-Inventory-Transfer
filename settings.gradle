@@ -10,3 +10,4 @@ pluginManagement {
 }
 
 include '26.1_26.2'
+include '26.3'
